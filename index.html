@@ -1,0 +1,62 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-success">Greetings, Fellow Residents of Lozells!</h1>
+                <p class="lead mb-4">At Lawn Mowers Inc, we are dedicated to providing top-quality lawn care services to our community at affordable prices. Our experienced team takes pride in maintaining beautiful, well-manicured lawns for homeowners and businesses alike.</p>
+                <div class="d-flex gap-3">
+                    <a href="{{ url_for('quote') }}" class="btn btn-success btn-lg">
+                        <i class="fas fa-calculator me-2"></i>Get Free Quote
+                    </a>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-success btn-lg">
+                        <i class="fas fa-list me-2"></i>View Services
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='grass_image.jpg') }}" alt="Beautiful cut grass" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-dollar-sign fa-3x text-success mb-3"></i>
+                        <h5>Affordable Prices</h5>
+                        <p>Competitive rates without compromising on quality</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-users fa-3x text-success mb-3"></i>
+                        <h5>Experienced Team</h5>
+                        <p>Professional lawn care specialists with years of experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-clock fa-3x text-success mb-3"></i>
+                        <h5>Year-Round Service</h5>
+                        <p>Keeping your outdoor spaces pristine and inviting all year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

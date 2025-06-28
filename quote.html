@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+
+{% block title %}Get Quote - LawnMowers Inc{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="text-center mb-5">Get Your Free Quote</h1>
+            
+            <div class="card shadow">
+                <div class="card-body">
+                    <form id="quoteForm">
+                        <div class="mb-3">
+                            <label for="lawnSize" class="form-label">Lawn Size (square feet)</label>
+                            <input type="number" class="form-control" id="lawnSize" min="1" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="serviceType" class="form-label">Service Type</label>
+                            <select class="form-select" id="serviceType" required>
+                                <option value="">Choose a service...</option>
+                                <option value="basic">Basic Mowing - $25 base</option>
+                                <option value="premium">Premium Care - $45 base</option>
+                                <option value="deluxe">Deluxe Package - $65 base</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="frequency" class="form-label">Service Frequency</label>
+                            <select class="form-select" id="frequency">
+                                <option value="weekly">Weekly</option>
+                                <option value="biweekly" selected>Bi-weekly</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success w-100">Calculate Quote</button>
+                    </form>
+                    
+                    <div id="quoteResult" class="mt-4" style="display: none;">
+                        <div class="alert alert-success">
+                            <h5>Your Quote:</h5>
+                            <p class="mb-0" id="quoteDetails"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

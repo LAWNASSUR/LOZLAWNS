@@ -1,0 +1,66 @@
+
+{% extends "base.html" %}
+
+{% block title %}Our Services - LawnMowers Inc{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mb-5">Our Services</h1>
+    
+    <div class="row">
+        <div class="col-md-4 mb-4" id="basic">
+            <div class="card h-100">
+                <div class="card-header bg-success text-white text-center">
+                    <h4>Basic Mowing</h4>
+                    <h2>$25<small>/visit</small></h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Grass cutting</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Edge trimming</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Debris cleanup</li>
+                    </ul>
+                    <button class="btn btn-success w-100" onclick="selectService('basic')">Choose Basic</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4" id="premium">
+            <div class="card h-100 border-success">
+                <div class="card-header bg-success text-white text-center">
+                    <h4>Premium Care</h4>
+                    <h2>$45<small>/visit</small></h2>
+                    <span class="badge bg-warning">Most Popular</span>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Everything in Basic</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Hedge trimming</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Weed removal</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Leaf blowing</li>
+                    </ul>
+                    <button class="btn btn-success w-100" onclick="selectService('premium')">Choose Premium</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4" id="deluxe">
+            <div class="card h-100">
+                <div class="card-header bg-success text-white text-center">
+                    <h4>Deluxe Package</h4>
+                    <h2>$65<small>/visit</small></h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Everything in Premium</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Fertilization</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Pest control</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Seasonal maintenance</li>
+                    </ul>
+                    <button class="btn btn-success w-100" onclick="selectService('deluxe')">Choose Deluxe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
